@@ -2,24 +2,19 @@ const listItems = document.querySelector('#list');
 
 const listArr = [
   {
-    description: 'Play football',
+    description: 'Wash dishes',
     completed: false,
     index: 1,
   },
   {
-    description: 'Reg for codecamp',
+    description: 'Visit grandma',
     completed: false,
     index: 2,
   },
   {
-    description: 'Go to the gym',
+    description: 'Write some lines of code',
     completed: false,
     index: 3,
-  },
-  {
-    description: 'Party with friends',
-    completed: false,
-    index: 4,
   },
 ];
 
