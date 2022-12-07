@@ -37,6 +37,7 @@ header {
   height: 30px;
   border: none;
   width: 100%;
+  outline: none;
 }
 
 #add-btn {
@@ -64,7 +65,7 @@ header {
   display: flex;
   width: -webkit-fill-available;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 12px;
 }
 
 li {
@@ -73,8 +74,20 @@ li {
   width: -webkit-fill-available;
   align-items: center;
   padding-left: 10px;
+  height: 3em;
 }
 
 hr {
   margin: 0;
+}
+
+.list-input {
+  outline: none;
+  border: none;
+}
+
+.delete-btn {
+  border: none;
+  background-color: white;
+  color: #6c6c6c;
 }
