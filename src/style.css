@@ -47,12 +47,14 @@ header {
 
 .clear-all {
   height: 30px;
-  background-color: rgb(240 240 240 / 58%);
+  background-color: #f0f0f094;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #6c6c6c;
   padding: 5%;
+  width: -webkit-fill-available;
+  border: 1px solid #f0f0f000;
 }
 
 #list {

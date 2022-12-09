@@ -1,5 +1,8 @@
+import { completedTrue, completedFalse } from './checkbox';
+
 const listItems = document.querySelector('#list');
 const addTask = document.getElementById('input-task');
+const clearAll = document.querySelector('.clear-all');
 
 let listArr = [];
 
@@ -19,7 +22,7 @@ const pushList = () => {
   listItems.innerHTML = '';
   listArr.forEach((obj) => {
     const toDo = `<li>
-      <div><input type="checkbox"></div>
+      <div><input class= "check-box" type="checkbox" data-id="${obj.index}"></div>
       <div class="title a-list">
           <input data-id="${obj.index}" class= "list-input" type = "text" value = "${obj.description}">
           <button class="delete-btn" data-id="${obj.index}"><i class="fa fa-ellipsis-v"></i></button>
@@ -59,6 +62,27 @@ const pushList = () => {
       update();
     });
   });
+
+  const checkBox = document.querySelectorAll('.check-box');
+  checkBox.forEach((tick) => {
+    tick.addEventListener('change', (e) => {
+      if (e.currentTarget.checked) {
+        const dataSet = parseInt(tick.dataset.id, 10);
+        const tickId = listArr.findIndex((object) => object.index === dataSet);
+        completedTrue(listArr, tickId);
+        pushToLocal();
+      } else {
+        const dataSet = parseInt(tick.dataset.id, 10);
+        const tickId = listArr.findIndex((object) => object.index === dataSet);
+        completedFalse(listArr, tickId);
+        pushToLocal();
+      }
+    });
+  });
+};
+
+const clear = () => {
+  listArr = listArr.filter((obj) => obj.completed !== true);
 };
 
 const showList = () => {
@@ -69,5 +93,5 @@ const showList = () => {
 };
 
 export {
-  pushList, addList, showList, pushToLocal, addTask,
+  pushList, addList, showList, pushToLocal, clear, addTask, clearAll,
 };
