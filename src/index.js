@@ -1,9 +1,7 @@
 import './style.css';
 import {
-  pushList, addList, showList, pushToLocal, clear, addTask,
+  pushList, addList, showList, pushToLocal, clear, addTask, clearAll,
 } from './modules/displayList';
-
-const clearAll = document.querySelector('.clear');
 
 window.addEventListener('load', () => {
   showList();

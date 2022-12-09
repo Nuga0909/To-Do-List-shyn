@@ -2,6 +2,7 @@ import { completedTrue, completedFalse } from './checkbox.js';
 
 const listItems = document.querySelector('#list');
 const addTask = document.getElementById('input-task');
+const clearAll = document.querySelector('.clear');
 
 let listArr = [];
 
@@ -92,5 +93,5 @@ const showList = () => {
 };
 
 export {
-  pushList, addList, showList, pushToLocal, clear, addTask,
+  pushList, addList, showList, pushToLocal, clear, addTask, clearAll,
 };
