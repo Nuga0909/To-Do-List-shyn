@@ -48,7 +48,7 @@
 
 <!-- > Add a link to your deployed project. -->
 
-- [Live Demo Link](https://livedemo.org/)
+- [Live Demo Link](https://nuga0909.github.io/To-Do-List/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
