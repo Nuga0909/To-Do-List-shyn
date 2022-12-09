@@ -1,4 +1,4 @@
-import { completedTrue, completedFalse } from './checkbox.js';
+import { completedTrue, completedFalse } from './checkbox';
 
 const listItems = document.querySelector('#list');
 const addTask = document.getElementById('input-task');
